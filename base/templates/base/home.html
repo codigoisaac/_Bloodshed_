@@ -11,7 +11,8 @@
     {% for room in rooms %}
     <div>
       <h5>
-        {{ room.id }} :: <a href="/room/{{room.slug}}">{{ room.name }}</a>
+        {{ room.id }} ::
+        <a href="{% url 'room' room.slug %}">{{ room.name }}</a>
       </h5>
     </div>
     {% endfor %}
