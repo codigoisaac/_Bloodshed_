@@ -1,11 +1,7 @@
 from django.shortcuts import render
+from .models import Room
 
-rooms = [
-    {"id": 1, "slug": "python", "name": "Python", "message": "Let's learn Python!"},
-    {"id": 2, "slug": "angular", "name": "Angular", "message": "Let's learn Angular!"},
-    {"id": 3, "slug": "go", "name": "Go", "message": "Let's learn Go!"},
-    {"id": 4, "slug": "csharp", "name": "C#", "message": "Let's learn C#!"},
-]
+rooms = Room.objects.all()
 
 
 def home(request):
