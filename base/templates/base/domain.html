@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+<!--  -->
+
+{% block content %}
+
+<h1>{{ domain.name }}</h1>
+
+{% for topic in domain.topics.all %}
+<div>
+  <h5>
+    {{ topic.id }} ::
+    <a href="{% url 'topic' domain.slug topic.slug %}">{{ topic.name }}</a>
+  </h5>
+</div>
+{% endfor %} {% endblock content %}

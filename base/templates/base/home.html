@@ -4,15 +4,15 @@
 
 {% block content %}
 
-<h1>Home Template.</h1>
+<h1>Home Page.</h1>
 
 <div>
   <div>
-    {% for room in rooms %}
+    {% for domain in domains %}
     <div>
       <h5>
-        {{ room.id }} ::
-        <a href="{% url 'room' room.slug %}">{{ room.name }}</a>
+        {{ domain.id }} ::
+        <a href="{% url 'domain' domain.slug %}">{{ domain.name }}</a>
       </h5>
     </div>
     {% endfor %}
